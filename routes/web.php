@@ -35,7 +35,7 @@ Route::post('/forgot-password/send-otp', [AuthController::class, 'sendOtp'])->na
 Route::post('/forgot-password/verify-otp', [AuthController::class, 'verifyOtp'])->name('password.verifyOtp');
 Route::middleware(['auth'])->group(function () {
     Route::prefix('backend')->group(function () {
-
+        Route::get('/', [DashboardController::class, 'dashboard'])->name('backend.dashboard');
         Route::get('/dashboard', [DashboardController::class, 'dashboard'])->name('dashboard.index');
         Route::get('/profile', [DashboardController::class, 'profile'])->name('profile.index');
         Route::post('/profile/update', [DashboardController::class, 'updateProfile'])->name('profile.update');
