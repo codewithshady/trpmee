@@ -117,7 +117,7 @@
                             data-wow-duration='1500ms' data-wow-delay='500ms'>
                             @if($destination->map_embed)
                              <iframe title="template google map"
-                                    src="{!! $destination->map_embed !!}"
+                                    src="{{ $destination->map_embed }}"
                                     class="map__@@extraClassName" allowfullscreen></iframe>
                                 
                             @else
