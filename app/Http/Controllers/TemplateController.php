@@ -63,7 +63,7 @@ class TemplateController extends Controller
    public function single_destination(Request $request)
    {
       $id = $request->input('id');
-      $destination = PackageDestinationDetails::findOrFail($id);
+      $destination = PackageDestinationDetails::where('pakage_destination_id', $id)->first();
 
       return view('frontend.services.single_destination', compact('destination'));
    }
