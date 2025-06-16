@@ -96,10 +96,11 @@
                                         Requirements:</p><!-- /.destination-details__sidebar__text -->
                                     <span>{{ $destination->visa_required ? 'Yes' : 'No' }}</span>
                                 </li>
+
                                 <li>
                                     <p class="destination-details__sidebar__text"> <i class="icon-check-star"></i>Per
                                         Person:</p><!-- /.destination-details__sidebar__text -->
-                                    <span>${{ $destination->price_per_person ? number_format($destination->price_per_person, 0) : '150' }}</span>
+                                    <span>{{ $destination->price_per_person ? number_format($destination->price_per_person, 0) : '150' }}</span>
                                 </li>
                                 <li>
                                     <p class="destination-details__sidebar__text"> <i class="icon-check-star"></i>

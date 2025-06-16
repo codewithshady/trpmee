@@ -82,7 +82,7 @@
 
                         <div class="listing-card-four__content__btn">
                             <div class="listing-card-four__price">
-                                <span class="listing-card-four__price__sub">Per Day</span>
+                                <span class="listing-card-four__price__sub">Per Person</span>
                                 <span class="listing-card-four__price__number">${{ number_format($tour->price, 2) }}</span>
                             </div><!-- /.listing-card-four__price -->
                             <a href="{{ route('single.destination', ['id'=>$tour->id])
