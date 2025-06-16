@@ -53,7 +53,7 @@ $gallery = $detail->gallery_images ?? [];
 
 <div class="mb-3">
     <label>Google Map Embed (iframe or src)</label>
-    <textarea id="map_embed" name="map_embed" class="form-control summernote" rows="3">{{ old('map_embed', $detail->map_embed ?? '') }}</textarea>
+    <textarea id="map_embed" name="map_embed" class="form-control" rows="3">{{ old('map_embed', $detail->map_embed ?? '') }}</textarea>
 </div>
 
 
