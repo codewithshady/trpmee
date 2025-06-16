@@ -23,6 +23,7 @@
                 <!-- Recent Activity -->
             </main>
             @yield('scripts')
+            
             <!-- Footer -->
             @include('backend.layout.footer')
         </div>

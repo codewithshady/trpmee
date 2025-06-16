@@ -24,7 +24,7 @@ $(document).ready(function () {
             ['fontname', ['fontname']],
             ['fontsize', ['fontsize']],
             ['color', ['color']],
-            ['para', ['ul', 'ol', 'paragraph']],
+            ['para', ['ul', 'ol', 'paragraph']], // ✅ Important: "ul" and "ol" are for list buttons
             ['height', ['height']],
             ['insert', ['link', 'picture', 'video', 'table', 'hr']],
             ['misc', ['fullscreen', 'codeview', 'undo', 'redo', 'help']]

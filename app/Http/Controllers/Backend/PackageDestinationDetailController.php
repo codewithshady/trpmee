@@ -104,9 +104,14 @@ class PackageDestinationDetailController extends Controller
 
     public function destroy(PackageDestinationDetails $detail)
     {
-        Storage::disk('public')->delete($detail->main_image);
-        foreach ($detail->gallery_images ?? [] as $img) {
-            Storage::disk('public')->delete($img);
+        if ($detail->main_image) {
+            Storage::disk('public')->delete($detail->main_image);
+        }
+
+        if ($detail->gallery_images) {
+            foreach ($detail->gallery_images as $img) {
+                Storage::disk('public')->delete($img);
+            }
         }
         $detail->delete();
         return back()->with('success', 'Detail deleted.');
